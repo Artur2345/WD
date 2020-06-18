@@ -1,0 +1,84 @@
+.header
+    background: $backgroundLightGray
+
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding-top: 57px
+
+    &__section
+        display: flex
+        align-items: center
+
+    &__logo
+        font-size: 48px
+        color: $blue
+        line-height: 28px
+        +Revalia
+
+    #logo
+        margin: 0 398px 0 27px
+    &__links
+        width: 611px
+        margin-right: 18px
+        padding-top: 3px
+
+    &__link
+        margin-left: 42px
+
+    &__item a
+        font-size: 16px
+        text-decoration: none
+        color: #000000
+        letter-spacing: 0.1em
+        transition: color 0.2s linear
+
+        &:hover
+            color: $lightText
+
+    &__item #link-home
+        color: $blue
+
+.hero
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+    &__section
+        display: flex
+        align-items: center
+        margin: 140px 0 146px 0
+
+    &__icon
+        margin: 21px 131px 0 103px
+
+    &__content
+        width: 541px
+        h1
+            margin-bottom: 34px
+            font-style: normal
+            font-weight: 500
+            font-size: 48px
+            line-height: 79px
+        p
+            margin-bottom: 52px
+            line-height: 26px
+            letter-spacing: 0.3px
+            font-size: 16px
+            color: $lightText
+
+    &__button
+        display: block
+        background: $blue
+        width: 225px
+        height: 65px
+        text-align: center
+        text-decoration: none
+        color: $white
+        line-height: 65px
+        letter-spacing: 0.1em
+        transition: background-color 0.3s linear
+        &:hover
+            background: rgba(52, 84, 122, 0.8)

@@ -1,0 +1,51 @@
+.video
+    background: $backgroundLightGray
+
+    &__wrap
+        display: flex
+        flex-direction: column
+        padding: 100px 0 100px 0
+
+    &__section
+        display: flex
+        justify-content: center
+
+    &__title
+        h2
+            margin: 0 0 50px 0
+            font-weight: 500
+            font-size: 32px
+            line-height: 37px
+            text-align: center
+
+        p
+            max-width: 540px
+            margin: 0 0 57px 0
+            color: $lightText
+            font-size: 16px
+            line-height: 26px
+            text-align: center
+
+    &__player
+        max-width: 1110px
+        max-height: 600px
+        position: relative
+
+        video
+            width: 100%
+
+    #video-play
+        img
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 1
+            margin: auto
+            border-radius: 50%
+            cursor: pointer
+            transition: opacity 0.5s
+
+        img:hover
+            opacity: 0.5
