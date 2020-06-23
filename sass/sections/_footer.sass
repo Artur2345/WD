@@ -1,15 +1,23 @@
 .footer
     background: $blue
+
     &__section
         display: flex
         justify-content: space-around
         padding: 50px 0 50px 0
+
+        +phones
+            flex-direction: column-reverse
+            align-items: center
 
     &__item
         display: flex
         flex-direction: row
         align-items: center
         color: $white
+
+        +phones
+            text-align: center
 
         h3
             margin: 0
@@ -23,3 +31,9 @@
 
         .icon
             margin-right: 22px
+
+            +phones
+                margin: 0 0 30px 20px
+
+                &:first-child
+                    margin: 0 0 30px 0
