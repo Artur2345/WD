@@ -27,9 +27,9 @@
             text-align: center
 
     &__player
+        position: relative
         max-width: 1110px
         max-height: 600px
-        position: relative
 
         video
             width: 100%
@@ -46,6 +46,9 @@
             border-radius: 50%
             cursor: pointer
             transition: opacity 0.5s
+
+            +phones
+                width: 15%
 
         img:hover
             opacity: 0.5

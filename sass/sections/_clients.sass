@@ -3,6 +3,19 @@
 
     &__wrap
         padding: 0 0 100px 0
+
+        +phones
+            padding: 0 0 20px 0
+
     &__section
         display: flex
         justify-content: space-between
+        width: 100%
+
+    &__item
+        +phones
+            display: flex
+            justify-content: center
+
+            img
+                max-width: 75%

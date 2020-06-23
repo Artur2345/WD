@@ -1,31 +1,130 @@
 .header
     background: $backgroundLightGray
 
+    &__nav
+        position: fixed
+        left: 0
+        width: 100%
+        z-index: 50
+
+        +phones
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+
+    &__nav::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 80px
+
+    .nav
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding: 20px 0
+        transition: 0.3s
+
+    .button__burger
+        display: none
+
+        +phones
+            position: relative
+            display: block
+            margin: 10px 20px 0 0
+            width: 30px
+            height: 20px
+
+            &::before, &::after
+                content: ''
+                position: absolute
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #000
+                transition: 0.3s
+
+            span
+                position: absolute
+                top: 9px
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #000
+                transition: 0.3s
+
+            &::before
+                top: 0
+
+            &::after
+                bottom: 0
+
+    .active
+        span
+            transform: scale(0)
+
+        &::before
+            transform: rotate(45deg)
+            top: 9px
+
+        &::after
+            transform: rotate(-45deg)
+            bottom: 9px
+
     &__wrap
         display: flex
         flex-wrap: wrap
         justify-content: space-between
         padding-top: 57px
+        background: #eeeff1de
+        transition: 0.3s
+
+        +phones
+            padding: 20px 0 20px 0
 
     &__section
         display: flex
         align-items: center
+        z-index: 2
 
     &__logo
-        font-size: 48px
         color: $blue
+        font-size: 48px
         line-height: 28px
         +Revalia
 
+        +phones
+            font-size: 32px
+
     #logo
         margin: 0 398px 0 27px
+        z-index: 2
+
+        +phones
+            margin: 0 0 0 20px
+
     &__links
-        width: 611px
+        max-width: 611px
         margin-right: 18px
         padding-top: 3px
 
+        +phones
+            display: none
+            flex-direction: column
+            padding: 70px 0 0 0
+
+    .active
+        display: flex
+
     &__link
-        margin-left: 42px
+        margin: 0 0 0 42px
+
+        +phones
+            margin: 15px 0 0 0
 
     &__item a
         font-size: 16px
@@ -45,23 +144,42 @@
         display: flex
         flex-wrap: wrap
         justify-content: center
+        padding: 104px 0 0 0
 
     &__section
         display: flex
         align-items: center
         margin: 140px 0 146px 0
 
+        +phones
+            justify-content: center
+            margin: 10px 0 12px 0
+
     &__icon
         margin: 21px 131px 0 103px
 
+        +phones
+            margin: 0
+            width: 75%
+            img
+                width: 100%
+
     &__content
         width: 541px
+
+        +phones
+            width: 100%
+            text-align: center
+
         h1
             margin-bottom: 34px
             font-style: normal
             font-weight: 500
             font-size: 48px
             line-height: 79px
+
+            +phones
+                font-size: 32px
         p
             margin-bottom: 52px
             line-height: 26px
@@ -70,15 +188,22 @@
             color: $lightText
 
     &__button
-        display: block
-        background: $blue
         width: 225px
         height: 65px
-        text-align: center
-        text-decoration: none
-        color: $white
-        line-height: 65px
-        letter-spacing: 0.1em
+        background: $blue
         transition: background-color 0.3s linear
+
+        +phones
+            margin: 20px auto
+
         &:hover
             background: rgba(52, 84, 122, 0.8)
+
+        a
+            display: block
+            width: 100%
+            line-height: 65px
+            letter-spacing: 0.1em
+            text-align: center
+            text-decoration: none
+            color: $white
